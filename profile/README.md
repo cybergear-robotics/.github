@@ -6,28 +6,7 @@ The Holybro PM03D power module distributes power to the system. The ESP32 runs a
 
 A Gazebo simulation is available, but remains a work in progress. The project is not yet complete; additional repositories will be published and documented over time.
 
-```mermaid
-flowchart TB
-    RPi[Raspberry Pi 4]
-
-    subgraph Hat[Raspberry Pi HAT]
-        ESP[ESP32]
-        CAN[TJA1051T]
-        IMU[ICM-20948]
-    end
-
-    subgraph Power[Holybro PM03D Power Module]
-        INA[INA226]
-    end
-
-    Motors[CyberGear Motors]
-
-    RPi <-->|UART| Hat
-    INA <-->|I2C| ESP
-    ESP <-->|TWAI| CAN
-    ESP <-->|SPI| IMU
-    CAN <-->|CAN| Motors
-```
+The central documentation takes place in the [Wiki](https://github.com/cybergear-robotics/.github/wiki)
 
 ## Repositories
 
@@ -64,3 +43,4 @@ flowchart TB
 | Repository                                                             | Description                                                   |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------- |
 | [cybergear-docs](https://github.com/cybergear-robotics/cybergear-docs) | Documentation and further information about CyberGear motors. |
+| [Wiki](https://github.com/cybergear-robotics/.github/wiki) | Documentation and further information about CyberBot. |
